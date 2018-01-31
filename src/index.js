@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
 //CSS
-
-
+//JS
+import { sampleText } from './sampleText';
 
 
 class App extends React.Component {
@@ -12,13 +12,13 @@ class App extends React.Component {
                 <div className="row">
 
                 <div className="col-sm-6">
-                <textarea value="tapez votre text" rows="35" className="form-control">
+                <textarea value={sampleText} rows="35" className="form-control">
 
                 </textarea>
                 </div>
 
                 <div className="col-sm-6">
-                    <h1>Résultats</h1>
+                    {sampleText}
                 </div>
 
                 </div>
