@@ -11,13 +11,22 @@ class App extends React.Component {
         text: sampleText
     };
 
+    editText = (event => {
+        const text = event.target.value;
+        this.setState({ text });
+    })
+
     render() {
         return (
             <div className="container">
                 <div className="row">
 
                 <div className="col-sm-6">
-                <textarea value={this.state.text} rows="35" className="form-control">
+                <textarea 
+                value={this.state.text} 
+                rows="35" className="form-control"
+                onChange={(e) => this.editText(e)}
+                >
 
                 </textarea>
                 </div>
