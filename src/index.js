@@ -16,6 +16,9 @@ class App extends React.Component {
 
     componentWillMount() {
         const localStorageText = localStorage.getItem('text');
+        if (localStorageText) {
+            this.setState({ text: localStorageText });
+        }
     };
 
     componentWillUpdate(nextProps, nextState) {
